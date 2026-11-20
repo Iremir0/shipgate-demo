@@ -1,7 +1,7 @@
-# claude-code-pipeline · demo
+# shipgate · demo
 
 A deliberately tiny TypeScript cart calculator with **three ready-made issues**, so you can watch
-[claude-code-pipeline](https://github.com/Iremir0/claude-code-pipeline) take tickets from *To Do* to
+[shipgate](https://github.com/Iremir0/shipgate) take tickets from *To Do* to
 *Ready for Release* in about five minutes.
 
 | Issue | What it exercises |
@@ -19,8 +19,8 @@ A deliberately tiny TypeScript cart calculator with **three ready-made issues**,
    npm run seed        # creates status labels + the three issues with gh
    ```
 3. Open Claude Code in the repo and trust the folder. `.claude/settings.json` already enables the plugin from its
-   marketplace; accept the install prompt (or run `/plugin marketplace add Iremir0/claude-code-pipeline` and
-   `/plugin install claude-code-pipeline@claude-code-pipeline`).
+   marketplace; accept the install prompt (or run `/plugin marketplace add Iremir0/shipgate` and
+   `/plugin install shipgate@shipgate`).
 4. Run:
    ```
    /pipeline

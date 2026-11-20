@@ -1,7 +1,7 @@
-# Cart calculator (claude-code-pipeline demo)
+# Cart calculator (shipgate demo)
 
 A tiny TypeScript library that prices a shopping cart. It exists to demo
-[claude-code-pipeline](https://github.com/Iremir0/claude-code-pipeline).
+[shipgate](https://github.com/Iremir0/shipgate).
 
 ## Commands
 - `npm ci`, `npm run typecheck`, `npm test` (node:test via tsx). No services, no Docker.

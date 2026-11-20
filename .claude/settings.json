@@ -1,11 +1,11 @@
 {
   "extraKnownMarketplaces": {
-    "claude-code-pipeline": {
-      "source": { "source": "github", "repo": "Iremir0/claude-code-pipeline" }
+    "shipgate": {
+      "source": { "source": "github", "repo": "Iremir0/shipgate" }
     }
   },
   "enabledPlugins": {
-    "claude-code-pipeline@claude-code-pipeline": true
+    "shipgate@shipgate": true
   },
   "permissions": {
     "allow": [

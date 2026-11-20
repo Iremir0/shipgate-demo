@@ -1,8 +1,8 @@
 {
-  "name": "claude-code-pipeline-demo",
+  "name": "shipgate-demo",
   "version": "0.1.0",
   "private": true,
-  "description": "A tiny cart price calculator used to demo claude-code-pipeline.",
+  "description": "A tiny cart price calculator used to demo shipgate.",
   "type": "module",
   "license": "MIT",
   "scripts": {
