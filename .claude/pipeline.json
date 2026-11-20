@@ -13,7 +13,7 @@
   ],
   "risk": {
     "paths": ["src/pricing/**"],
-    "keywords": ["discount", "vat", "rounding"]
+    "keywords": ["discount", "vat", "rounding", "subtotal"]
   },
   "models": { "devStandard": "sonnet", "devCritical": "opus", "reviewerFor": { "sonnet": "opus", "opus": "sonnet" } },
   "parallel": 2,

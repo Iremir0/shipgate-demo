@@ -10,13 +10,14 @@ test('pipeline config is valid JSON with verifyOnStop rules', () => {
   for (const r of c.verifyOnStop) assert.doesNotThrow(() => new RegExp(r.paths))
 })
 
-test('only the discount issue matches a risk keyword', () => {
+test('only the money issues (discount, subtotal) match a risk keyword', () => {
   const c = read('.claude/pipeline.json')
   const seed = readFileSync(new URL('../scripts/seed-issues.mjs', import.meta.url), 'utf8')
   const blocks = seed.split(/\{\s*title: '/).slice(1)
   const risky = blocks.filter((b) => c.risk.keywords.some((k: string) => b.toLowerCase().includes(k))).map((b) => b.slice(0, 30))
-  assert.deepEqual(risky.length, 1)
+  assert.equal(risky.length, 2)
   assert.match(risky[0], /discount/)
+  assert.match(risky[1], /subtotal/)
 })
 
 test('claude settings are valid JSON', () => {

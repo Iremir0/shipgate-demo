@@ -8,7 +8,7 @@ A deliberately tiny TypeScript cart calculator with **three ready-made issues**,
 |---|---|
 | Improve the error message for an invalid quantity | `dev-standard`, a one-sentence change: test-first may be skipped |
 | Add percentage discount codes | risk keyword → `dev-critical`, test-first is mandatory, `security-reviewer` joins the review |
-| Bug: subtotal ignores the quantity of the last item | bug flow: a failing regression test is written before the fix |
+| Bug: subtotal ignores the quantity of the last item | bug flow: a failing regression test is written before the fix; money maths, so the `subtotal` risk keyword sends it to `dev-critical` with `security-reviewer` |
 
 ## Try it
 
