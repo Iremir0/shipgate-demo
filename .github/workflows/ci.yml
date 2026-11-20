@@ -12,3 +12,4 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm test
+      - run: node -e "JSON.parse(require('fs').readFileSync('.claude/pipeline.json','utf8'))"

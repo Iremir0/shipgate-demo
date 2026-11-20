@@ -9,11 +9,11 @@
     "suites": []
   },
   "verifyOnStop": [
-    { "paths": "^(src|tests)/.*\.ts$", "run": ["npm run typecheck", "npm test"] }
+    { "paths": "^(src|tests)/.*\\.ts$", "run": ["npm run typecheck", "npm test"] }
   ],
   "risk": {
     "paths": ["src/pricing/**"],
-    "keywords": ["discount", "vat", "price", "money", "rounding"]
+    "keywords": ["discount", "vat", "rounding"]
   },
   "models": { "devStandard": "sonnet", "devCritical": "opus", "reviewerFor": { "sonnet": "opus", "opus": "sonnet" } },
   "parallel": 2,

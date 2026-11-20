@@ -1,20 +1,76 @@
 {
-  "extraKnownMarketplaces": {
-    "shipgate": {
-      "source": { "source": "github", "repo": "Iremir0/shipgate" }
-    }
+  "permissions": {
+    "allow": [
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git branch *)",
+      "Bash(git switch *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)",
+      "Bash(git merge *)",
+      "Bash(git worktree *)",
+      "Bash(git push -u origin *)",
+      "Bash(git -C *)",
+      "Bash(gh issue *)",
+      "Bash(gh label *)",
+      "Bash(gh pr create *)",
+      "Bash(gh pr view *)",
+      "Bash(gh pr edit *)",
+      "Bash(gh pr merge * --merge)",
+      "Bash(gh pr checks *)",
+      "Bash(gh run *)",
+      "Bash(gh auth status)",
+      "Bash(env -u GITHUB_TOKEN gh issue *)",
+      "Bash(env -u GITHUB_TOKEN gh label *)",
+      "Bash(env -u GITHUB_TOKEN gh pr *)",
+      "Bash(npm ci)",
+      "Bash(npm run *)",
+      "Bash(npm test)",
+      "Bash(npx tsx --test *)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(gh *)",
+      "Bash(npm install *)",
+      "Bash(npm uninstall *)",
+      "Bash(docker compose down*)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(./**/.env)",
+      "Read(./**/secrets/**)",
+      "Bash(git push *--force*)",
+      "Bash(git push *-f*)",
+      "Bash(git push *+*)",
+      "Bash(git push *--delete*)",
+      "Bash(git -C * push *--force*)",
+      "Bash(git -C * push *-f*)",
+      "Bash(git -C * push *+*)",
+      "Bash(git reset --hard*)",
+      "Bash(git -C * reset --hard*)",
+      "Bash(gh repo delete*)",
+      "Bash(gh * --admin*)",
+      "Bash(gh api *)",
+      "Bash(npm audit fix --force*)",
+      "Bash(docker compose down -v*)",
+      "Bash(docker volume rm *)",
+      "Bash(docker volume prune*)"
+    ]
   },
   "enabledPlugins": {
     "shipgate@shipgate": true
   },
-  "permissions": {
-    "allow": [
-      "Bash(git status *)", "Bash(git diff *)", "Bash(git log *)", "Bash(git branch *)", "Bash(git switch *)",
-      "Bash(git add *)", "Bash(git commit *)", "Bash(git fetch *)", "Bash(git pull *)", "Bash(git merge *)",
-      "Bash(git worktree *)", "Bash(git push *)",
-      "Bash(gh *)", "Bash(env -u GITHUB_TOKEN gh *)",
-      "Bash(npm ci)", "Bash(npm run *)", "Bash(npm test)", "Bash(npx tsx --test *)"
-    ],
-    "deny": ["Bash(git push --force*)", "Bash(git push -f*)", "Bash(git reset --hard*)", "Read(.env)", "Read(.env.*)"]
+  "extraKnownMarketplaces": {
+    "shipgate": {
+      "source": {
+        "source": "github",
+        "repo": "Iremir0/shipgate"
+      }
+    }
   }
 }
