@@ -31,6 +31,27 @@ test('subtotal adds line totals', () => {
   ]), 6500)
 })
 
+test('subtotal multiplies the last item by its quantity (regression #3)', () => {
+  assert.equal(subtotal([
+    { sku: 'MUG', unitPriceMinor: 1250, qty: 1 },
+    { sku: 'TEE', unitPriceMinor: 4000, qty: 3 },
+  ]), 13250)
+})
+
+test('subtotal of a single-item cart uses its quantity', () => {
+  assert.equal(subtotal([{ sku: 'TEE', unitPriceMinor: 4000, qty: 3 }]), 12000)
+})
+
+test('subtotal rejects a negative quantity on the last item', () => {
+  assert.throws(
+    () => subtotal([
+      { sku: 'MUG', unitPriceMinor: 1250, qty: 1 },
+      { sku: 'TEE', unitPriceMinor: 4000, qty: -1 },
+    ]),
+    { message: 'Quantity must be a non-negative integer (got -1) for SKU TEE' },
+  )
+})
+
 test('applyVat adds VAT and rounds half up to a whole minor unit', () => {
   assert.equal(applyVat(1000, 20), 1200)
   assert.equal(applyVat(999, 20), 1199) // 1198.8 -> 1199
