@@ -32,6 +32,7 @@ The pipeline never closes issues: closing is your "release".
 
 ## What's inside
 - `src/cart.ts` — `lineTotal`, `subtotal`, `applyVat` (integer minor units, half-up rounding)
+- `src/pricing/discount.ts` — `applyDiscount` (percentage codes `WELCOME10`, `VIP25`; discount rounded half up, before VAT)
 - `CLAUDE.md` — the invariants reviewers enforce
 - `.claude/pipeline.json` — the pipeline configuration for this repo
 - `scripts/seed-issues.mjs` — labels + issues
