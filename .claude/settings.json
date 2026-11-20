@@ -63,7 +63,8 @@
     ]
   },
   "enabledPlugins": {
-    "shipgate@shipgate": true
+    "shipgate@shipgate": true,
+    "shipgate-hooks@shipgate": true
   },
   "extraKnownMarketplaces": {
     "shipgate": {
