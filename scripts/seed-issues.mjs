@@ -6,7 +6,7 @@ import { spawnSync } from 'node:child_process'
 function gh(args, input) {
   const opts = { encoding: 'utf8', input }
   let r = spawnSync('gh', args, opts)
-  if (r.status !== 0 && /GITHUB_TOKEN/.test(r.stderr) && process.env.GITHUB_TOKEN) {
+  if (r.status !== 0 && process.env.GITHUB_TOKEN && /GITHUB_TOKEN|401|Bad credentials|authentication/i.test(r.stderr)) {
     const env = { ...process.env }
     delete env.GITHUB_TOKEN
     r = spawnSync('gh', args, { ...opts, env })
