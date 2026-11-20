@@ -30,9 +30,13 @@ A deliberately tiny TypeScript cart calculator with **three ready-made issues**,
 
 The pipeline never closes issues: closing is your "release".
 
+> **Want to see the result first?** The tag [`example-run`](https://github.com/Iremir0/shipgate-demo/tree/example-run)
+> holds the code after the first real run, and PRs [#4](https://github.com/Iremir0/shipgate-demo/pull/4),
+> [#5](https://github.com/Iremir0/shipgate-demo/pull/5) and [#6](https://github.com/Iremir0/shipgate-demo/pull/6)
+> show what the agents did. `main` is kept at the starting state so the template gives you unsolved issues.
+
 ## What's inside
 - `src/cart.ts` — `lineTotal`, `subtotal`, `applyVat` (integer minor units, half-up rounding)
-- `src/pricing/discount.ts` — `applyDiscount` (percentage codes `WELCOME10`, `VIP25`; discount rounded half up, before VAT)
 - `CLAUDE.md` — the invariants reviewers enforce
 - `.claude/pipeline.json` — the pipeline configuration for this repo
 - `scripts/seed-issues.mjs` — labels + issues
