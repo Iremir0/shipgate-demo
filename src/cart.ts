@@ -2,7 +2,7 @@
 export type LineItem = { sku: string; unitPriceMinor: number; qty: number }
 
 export function lineTotal(item: LineItem): number {
-  if (!Number.isInteger(item.qty) || item.qty < 0) throw new Error('invalid qty')
+  if (!Number.isInteger(item.qty) || item.qty < 0) throw new Error(`Quantity must be a non-negative integer (got ${item.qty}) for SKU ${item.sku}`)
   return item.unitPriceMinor * item.qty
 }
 
