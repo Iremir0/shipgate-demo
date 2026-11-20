@@ -1,0 +1,20 @@
+{
+  "extraKnownMarketplaces": {
+    "claude-code-pipeline": {
+      "source": { "source": "github", "repo": "Iremir0/claude-code-pipeline" }
+    }
+  },
+  "enabledPlugins": {
+    "claude-code-pipeline@claude-code-pipeline": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git status *)", "Bash(git diff *)", "Bash(git log *)", "Bash(git branch *)", "Bash(git switch *)",
+      "Bash(git add *)", "Bash(git commit *)", "Bash(git fetch *)", "Bash(git pull *)", "Bash(git merge *)",
+      "Bash(git worktree *)", "Bash(git push *)",
+      "Bash(gh *)", "Bash(env -u GITHUB_TOKEN gh *)",
+      "Bash(npm ci)", "Bash(npm run *)", "Bash(npm test)", "Bash(npx tsx --test *)"
+    ],
+    "deny": ["Bash(git push --force*)", "Bash(git push -f*)", "Bash(git reset --hard*)", "Read(.env)", "Read(.env.*)"]
+  }
+}

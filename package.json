@@ -1,0 +1,19 @@
+{
+  "name": "claude-code-pipeline-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A tiny cart price calculator used to demo claude-code-pipeline.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "seed": "node scripts/seed-issues.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": { "node": ">=20" }
+}
