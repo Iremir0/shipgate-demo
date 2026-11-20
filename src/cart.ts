@@ -7,10 +7,7 @@ export function lineTotal(item: LineItem): number {
 }
 
 export function subtotal(items: LineItem[]): number {
-  if (items.length === 0) return 0
-  const head = items.slice(0, -1).reduce((sum, item) => sum + lineTotal(item), 0)
-  const last = items[items.length - 1]
-  return head + last.unitPriceMinor
+  return items.reduce((sum, item) => sum + lineTotal(item), 0)
 }
 
 /** Adds VAT at an integer percentage and rounds half up to a whole minor unit. */
