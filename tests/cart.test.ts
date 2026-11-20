@@ -7,7 +7,17 @@ test('lineTotal multiplies unit price by quantity', () => {
 })
 
 test('lineTotal rejects a negative quantity', () => {
-  assert.throws(() => lineTotal({ sku: 'MUG', unitPriceMinor: 1250, qty: -1 }))
+  assert.throws(
+    () => lineTotal({ sku: 'MUG', unitPriceMinor: 1250, qty: -1 }),
+    { message: 'Quantity must be a non-negative integer (got -1) for SKU MUG' },
+  )
+})
+
+test('lineTotal rejects a non-integer quantity', () => {
+  assert.throws(
+    () => lineTotal({ sku: 'MUG', unitPriceMinor: 1250, qty: 1.5 }),
+    { message: 'Quantity must be a non-negative integer (got 1.5) for SKU MUG' },
+  )
 })
 
 test('subtotal of an empty cart is 0', () => {
